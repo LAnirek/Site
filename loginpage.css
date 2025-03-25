@@ -13,6 +13,7 @@ header{
     float: left;
     background-color: blue;
     color: white;
+    text-align: center;
 }
 #right{
     width: 33%;
