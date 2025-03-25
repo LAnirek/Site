@@ -3,8 +3,21 @@ html{
 }
 
 
-#s1,#s2,#s3{
+#s1,#s2{
     float: left;
-    width: 33%;
+    height: 221px;
     margin-top:20%;
+}
+#s1{
+    width: 675px;
+}
+#s2{
+    width: 570png;
+}
+
+#gif{
+    display: none; 
+    width: 500px; 
+    height: 500px;
+    
 }

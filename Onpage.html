@@ -17,20 +17,21 @@
             
             let audio = new Audio("winstartup.mp4"); 
             audio.play();
-
+            
+            document.getElementById("swapButton").style.display = "none";
+            document.getElementById("gif").style.display = "block";
             
             setTimeout(function() {
                 window.location.href = "Loginpage.html"; 
             }, 6000); 
         }
             </script>
-                
-            <button onclick="playAudioAndRedirect()";><img src="winstart.jpg"></button>
-        </section>
-        
-        <section id="s3"> 
 
+            <img id="gif" src="hourglass.gifv">
+            <button id="swapButton" onclick="playAudioAndRedirect()";><img src="winstart.jpg"></button>
+            
         </section>
         
+       
     </body>
 </html>
