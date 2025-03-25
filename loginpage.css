@@ -1,0 +1,14 @@
+html{background-color: black;}
+
+#right{
+    width: 33%;
+    float: left;
+}
+#center{
+    width: 33%;
+    float: left;
+    background-color: blue;
+}
+#left{
+    width: 33%;
+}
