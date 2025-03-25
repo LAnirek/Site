@@ -12,7 +12,20 @@
         </section>
         
         <section id="s2">
-            <a href="Loginpage.html"><button</a><img src="winstart.jpg"></button></a>
+            <script>
+                function playAudioAndRedirect() {
+            
+            let audio = new Audio("winstartup.mp4"); 
+            audio.play();
+
+            
+            setTimeout(function() {
+                window.location.href = "Loginpage.html"; 
+            }, 6000); 
+        }
+            </script>
+                
+            <button onclick="playAudioAndRedirect()";><img src="winstart.jpg"></button>
         </section>
         
         <section id="s3"> 
