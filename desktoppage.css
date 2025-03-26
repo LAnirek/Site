@@ -70,4 +70,18 @@ td{
     text-align: left;
     padding: 2px;
     margin: 0px;
+    border-width:1px;
+    width: 190px;
+}
+#txt{
+    float: right;
+    border-color:#FFFFFF #808080 #808080 #FFFFFF;
+    background-color: #bdb0b0;
+    font-size:15px;
+    font-weight:bold;
+    font-family:Tahoma;
+    text-align:center;
+    padding: 13px;
+    width: 60px;
+    border-width:1px;
 }

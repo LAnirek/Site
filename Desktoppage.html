@@ -6,7 +6,22 @@
             Lazarquest os - desktop
         </title>
     </head>
-    <body>
+    <body onload="startTime()">
+        <script>
+            function startTime() {
+              const today = new Date();
+              let h = today.getHours();
+              let m = today.getMinutes();
+              m = checkTime(m);
+              document.getElementById('txt').innerHTML =  h + ":" + m;
+              setTimeout(startTime, 1000);
+            }
+            
+            function checkTime(i) {
+              if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+              return i;
+            }
+            </script>
         <header>
 
         </header>
@@ -22,7 +37,7 @@
                 <tr><td><img src="trash.png"></td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td></tr>
                 <tr><td><img src="trash.png"></td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td></tr>
             </table>
-            <section id="pasek"><button id="winstart"><img  src="winstart.jpg" width="115px" height="40px"></button><input value="Welcome" id="Welcome"></section>
+            <section id="pasek"><button id="winstart"><img  src="winstart.jpg" width="115px" height="40px"></button><input value="Welcome" id="Welcome"><section id="txt"></section></section>
         </section>
         <section id="right"> 
             <p></p>
