@@ -39,5 +39,35 @@ button {
 }
 #pasek {
     background-color: #C3C3C3;
-    width:606px;
+    width: 100%;
+    margin: 0px;
+    height: 44px;
+}
+
+#winstart {
+    height: 45px;
+    float: left;
+    margin: 0px;
+}
+
+#startlogo {
+    float: left;
+}
+
+td{
+    padding: 19px;
+    padding-right: 75px;
+}
+#Welcome{
+    float: left;
+    height: 36px;
+    background-color: #bdb0b0;
+    font-size:15px;
+    font-weight:bold;
+    font-family:Tahoma;
+    text-align:center;
+    border-color:#FFFFFF #808080 #808080 #FFFFFF;
+    text-align: left;
+    padding: 2px;
+    margin: 0px;
 }
