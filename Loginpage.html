@@ -65,28 +65,41 @@
                    
                     <p><button id="ok" type="submit" onclick="checkLogin()">Ok</button><button id="canc">Cancel</button></p>
                     <script>
+                           document.addEventListener("DOMContentLoaded", function () {  
                             const correctLogin = "NOCTIS";
                             const correctPassword = "OBSCURA";
-                            
-                        function checkLogin() {
-                           
-                            const login = document.getElementById("pol1").value;
-                            const password = document.getElementById("pol2").value;
 
-                            console.log("Wpisany login:", login);  // Sprawdź w konsoli
-                            console.log("Wpisane hasło:", password); // Sprawdź w konsoli
+                            // Pobranie referencji do przycisku OK
+                            document.getElementById("ok").addEventListener("click", checkLogin);
 
-                            if (login === correctLogin && password === correctPassword) {
-                                // Przekierowanie na stronę Dekstoppage.html po zalogowaniu
-                                window.location.replace("https://lanirek.github.io/Site/Desktoppage.html");
-                            } else {
-                                alert("Błędny login lub hasło!");
-                            }   
-                        }
-                        document.addEventListener("keydown", function(event) {
-                            if (event.key === "Enter") {
-                                checkLogin();
+                            function checkLogin() {
+                                const loginField = document.getElementById("pol1");
+                                const passwordField = document.getElementById("pol2");
+
+                                if (!loginField || !passwordField) {
+                                    console.error("Nie znaleziono pól logowania!");
+                                    return;
+                                }
+
+                                const login = loginField.value.trim();
+                                const password = passwordField.value.trim();
+
+                                console.log("Wpisany login:", login);  // Debugowanie w konsoli
+                                console.log("Wpisane hasło:", password); // Debugowanie w konsoli
+
+                                if (login === correctLogin && password === correctPassword) {
+                                    window.location.replace("https://lanirek.github.io/Site/Desktoppage.html");
+                                } else {
+                                    alert("Błędny login lub hasło!");
+                                }
                             }
+
+                            // Obsługa logowania po wciśnięciu Enter
+                            document.addEventListener("keydown", function (event) {
+                                if (event.key === "Enter") {
+                                    checkLogin();
+                                }
+                            });
                         });
                     </script>
                     
