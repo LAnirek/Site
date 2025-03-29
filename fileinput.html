@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odczyt pliku z komputera</title>
+</head>
+<body>
+
+    <input type="file" id="fileInput">
+    <p id="fileContent"></p>
+
+    <script>
+        document.getElementById("fileInput").addEventListener("change", function(event) {
+            let file = event.target.files[0]; // Pobieramy pierwszy wybrany plik
+            if (!file) return;
+
+            let reader = new FileReader();
+            reader.onload = function(e) {
+                document.getElementById("fileContent").textContent = e.target.result;
+            };
+            reader.readAsText(file);
+        });
+    </script>
+
+</body>
+</html>

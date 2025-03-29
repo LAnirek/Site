@@ -19,9 +19,39 @@
                 <section id="login1">
                     
                 </section>
-                
+                <div id="popup">
+                    <p> <i id="pol1">N</i> ie wszystko jest takie, jakim się wydaje.</p>
+                    <p> <i id="pol1">O</i> czy zwodzą, ale umysł widzi prawdę.</p>
+                    <p>  <i id="pol1">C</i> zas płynie nieubłaganie, a ślady przeszłości giną w mroku.</p>
+                        <p>    <i id="pol1">T</i> am, gdzie inni widzą chaos, ty znajdziesz porządek.</p>
+                        <p>    <i id="pol1">I</i> stnieje klucz, ale nie każdy potrafi go dostrzec.</p>
+                        <p>    <i id="pol1">S</i> zukaj między wierszami, tam ukryta jest droga.</p>
+                        
+                        <p>    <i id="pol2">O</i> dpowiedź nie leży na powierzchni, lecz w cieniu.</p>
+                        <p>    <i id="pol2">B</i> rakuje tylko jednego elementu – twojej uwagi.</p>
+                        <p>    <i id="pol2">S</i> ekret tkwi w tym, czego nie wypowiesz na głos.</p>
+                        <p>    <i id="pol2">C</i> zy jesteś gotów podjąć wyzwanie?</p>
+                    <p><i id="pol2">U</i> łóż znaki w odpowiedniej kolejności.</p>
+                    <p><i id="pol2">R</i> ozpocznij podróż i znajdź prawdę.</p>
+                    <p><i id="pol2">A</i> by wejść, musisz poznać szept ciszy.</p>
+                    
+                </div>
                 <section id="login2">
-                    <p id="welc"> Welcome to LazarOs <button id="b2">X</button> <button id="b1">?</button></p>
+                    <p id="welc"> Welcome to LazarOs <button id="b2" onclick="playSound()">X</button> <button id="b1" onclick="togglePopup()">?</button></p>
+            
+                    <script>
+                        function togglePopup() {
+                            let popup = document.getElementById("popup");
+                           
+                
+                            if (popup.style.display === "none" || popup.style.display === "") {
+                                popup.style.display = "block";
+                                
+                            } else {
+                                popup.style.display = "none";
+                            }
+                        }
+                    </script>
                     <img id="key" src="winkey.png" alt="key" width="125px" height="150px">
                     <br>
                     <table>
@@ -29,11 +59,26 @@
                     </table>
                     <br>
                     <table>
-                        <tr><td>User name:</td><td><input></td></tr>
-                        <tr><td>Password:</td><td><input></td></tr>
-                        
+                        <tr><td>User name:</td><td><input  id="pol1" value="INPUT"></td></tr>
+                        <tr><td>Password:</td><td><input  id="pol2" value="INPUT" type="password"></td></tr>
                     </table>
-                    <p><button id="ok">Ok</button><button id="canc">Cancel</button></p>
+                   
+                    <p><button id="ok" onclick="checkLogin()">Ok</button><button id="canc">Cancel</button></p>
+                    <script>
+                    
+
+                        function checkLogin() {
+                            const login = document.getElementById("pol1").value;
+                            const password = document.getElementById("pol2").value;
+
+                            if (login === correctLogin && password === correctPassword) {
+                                // Przekierowanie na stronę Dekstoppage.html po zalogowaniu
+                                window.location.href = "Dekstoppage.html";
+                            } else {
+                                alert("Błędny login lub hasło!");
+                            }
+                        }
+                    </script>
                     
                     
                 </section>
