@@ -65,12 +65,16 @@
                    
                     <p><button id="ok" type="submit" onclick="checkLogin()">Ok</button><button id="canc">Cancel</button></p>
                     <script>
-                        
-                        function checkLogin() {
                             const correctLogin = "NOCTIS";
                             const correctPassword = "OBSCURA";
+                            
+                        function checkLogin() {
+                           
                             const login = document.getElementById("pol1").value;
                             const password = document.getElementById("pol2").value;
+
+                            console.log("Wpisany login:", login);  // Sprawdź w konsoli
+                            console.log("Wpisane hasło:", password); // Sprawdź w konsoli
 
                             if (login === correctLogin && password === correctPassword) {
                                 // Przekierowanie na stronę Dekstoppage.html po zalogowaniu
