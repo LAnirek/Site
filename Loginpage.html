@@ -60,7 +60,7 @@
                     <br>
                     <table>
                         <tr><td>User name:</td><td><input  id="pol1" value="INPUT"></td></tr>
-                        <tr><td>Password:</td><td><input  id="pol2" value="INPUT" type="password"></td></tr>
+                        <tr><td>Password:</td><td><input  id="pol2" value="INPUT"></td></tr>
                     </table>
                    
                     <p><button id="ok" onclick="checkLogin()">Ok</button><button id="canc">Cancel</button></p>
@@ -71,9 +71,9 @@
                             const login = document.getElementById("pol1").value;
                             const password = document.getElementById("pol2").value;
 
-                            if (login === correctLogin && password === correctPassword) {
+                            if (login == correctLogin && password == correctPassword) {
                                 // Przekierowanie na stronę Dekstoppage.html po zalogowaniu
-                                window.location.href = "Dekstoppage.html";
+                                window.location.href = "https://lanirek.github.io/Site/Desktoppage.html";
                             } else {
                                 alert("Błędny login lub hasło!");
                             }
