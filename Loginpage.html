@@ -63,9 +63,10 @@
                         <tr><td>Password:</td><td><input  id="pol2" value="INPUT"></td></tr>
                     </table>
                    
-                    <p><button id="ok" onclick="checkLogin()">Ok</button><button id="canc">Cancel</button></p>
+                    <p><button id="ok" type="submit" onclick="checkLogin()">Ok</button><button id="canc">Cancel</button></p>
                     <script>
-                    
+                        const correctLogin = "NOCTIS";
+                        const correctPassword = "OBSCURA";
 
                         function checkLogin() {
                             const login = document.getElementById("pol1").value;
@@ -76,7 +77,7 @@
                                 window.location.href = "https://lanirek.github.io/Site/Desktoppage.html";
                             } else {
                                 alert("Błędny login lub hasło!");
-                            }
+                            }   
                         }
                     </script>
                     
