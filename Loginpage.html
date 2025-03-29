@@ -63,14 +63,10 @@
                         <tr><td>Password:</td><td><input  id="pol2" placeholder="INPUT" type="password"></td></tr>
                     </table>
                    
-                    <p><button id="ok" type="submit" onclick="checkLogin()">Ok</button><button id="canc">Cancel</button></p>
+                    <p><button id="ok" type="submit" onclick="checkLogin()" >Ok</button><button id="canc">Cancel</button></p>
                     <script>
-                           document.addEventListener("DOMContentLoaded", function () {  
                             const correctLogin = "NOCTIS";
                             const correctPassword = "OBSCURA";
-
-                            // Pobranie referencji do przycisku OK
-                            document.getElementById("ok").addEventListener("click", checkLogin);
 
                             function checkLogin() {
                                 const loginField = document.getElementById("pol1");
@@ -84,8 +80,8 @@
                                 const login = loginField.value.trim();
                                 const password = passwordField.value.trim();
 
-                                console.log("Wpisany login:", login);  // Debugowanie w konsoli
-                                console.log("Wpisane hasło:", password); // Debugowanie w konsoli
+                                console.log("Wpisany login:", login);  
+                                console.log("Wpisane hasło:", password); 
 
                                 if (login === correctLogin && password === correctPassword) {
                                     window.location.replace("https://lanirek.github.io/Site/Desktoppage.html");
@@ -94,13 +90,17 @@
                                 }
                             }
 
-                            // Obsługa logowania po wciśnięciu Enter
+                            // Dodanie nasłuchiwania kliknięcia przycisku "Ok"
+                            document.addEventListener("DOMContentLoaded", function () {
+                                document.getElementById("ok").addEventListener("click", checkLogin);
+                            });
+
+                            // Obsługa Enter do logowania
                             document.addEventListener("keydown", function (event) {
                                 if (event.key === "Enter") {
                                     checkLogin();
                                 }
                             });
-                        });
                     </script>
                     
                     
